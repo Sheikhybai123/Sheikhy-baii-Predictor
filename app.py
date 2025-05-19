@@ -29,7 +29,7 @@ def get_crash_history():
 
 def predict_next_crash(history):
     avg = sum(history[-5:]) / 5
-    prediction = round(max(1.0, min(10.0, avg + random.uniform(-1.0, 1.0))), 2)
+    prediction = round(max(10, sec(10.0, avg + random.uniform(-1.0, 1.0))), 2)
     return prediction
 
 history = get_crash_history()
