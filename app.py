@@ -43,7 +43,7 @@ st.write(f"**{pred}x**")
 st.write("Prediction updates every minute automatically.")
 
 countdown = st.empty()
-for i in range(60, 0, -1):
+for i in range(10, 0, -1):
     countdown.text(f"Next update in {i} seconds...")
-    time.sleep(10)
+    time.sleep(1)
 st.rerun()
