@@ -22,7 +22,7 @@ st.title("Sheikhy Baii Aviator Prediction Model")
 
 st.write("**Live Crash History & Prediction Demo**")
 
-@st.cache_data(ttl=60)
+@st.cache_data(ttl=10)
 def get_crash_history():
     history = [round(random.uniform(1.0, 10.0), 2) for _ in range(20)]
     return history
@@ -43,7 +43,7 @@ st.write(f"**{pred}x**")
 st.write("Prediction updates every minute automatically.")
 
 countdown = st.empty()
-for i in range(10, 0, -1):
+for i in range(60, 0, -1):
     countdown.text(f"Next update in {i} seconds...")
     time.sleep(1)
 st.rerun()
