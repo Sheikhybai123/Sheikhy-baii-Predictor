@@ -4,7 +4,6 @@ import time
 
 st.set_page_config(page_title="Sheikhy Baii Aviator Predictor", page_icon="🎯", layout="centered")
 
-# Styling
 st.markdown("""
     <style>
     body {
@@ -28,12 +27,10 @@ def get_crash_history():
 def predict_next_crash(history):
     avg = sum(history[-5:]) / 5
     prediction = round(avg + random.uniform(-1.0, 1.0), 2)
-    return max(1.0, prediction)  # Minimum 1.0
+    return max(1.0, prediction)
 
-# Main loop
 while True:
     history = get_crash_history()
-
     st.subheader("Crash History (Last 20 rounds)")
     st.write(history)
 
