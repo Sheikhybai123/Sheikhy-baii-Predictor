@@ -46,4 +46,4 @@ countdown = st.empty()
 for i in range(60, 0, -1):
     countdown.text(f"Next update in {i} seconds...")
     time.sleep(1)
-st.experimental_rerun()
+st.rerun()
